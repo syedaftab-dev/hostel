@@ -1,16 +1,5 @@
 import React, { useState } from 'react';
-import { 
-  Users, 
-  Search, 
-  Filter, 
-  Shield, 
-  UserCheck, 
-  UserX,
-  Edit,
-  MoreVertical,
-  Crown,
-  User as UserIcon
-} from 'lucide-react';
+import { Users, Search, Filter, Shield, UserCheck, UserX, CreditCard as Edit, MoveVertical as MoreVertical, Crown, User as UserIcon } from 'lucide-react';
 import { Header } from '../components/ui/Header';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';

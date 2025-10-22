@@ -1,17 +1,5 @@
 import React from 'react';
-import { 
-  Home, 
-  Calendar, 
-  MessageSquare, 
-  User, 
-  Utensils,
-  X,
-  LogOut,
-  Bell,
-  Settings,
-  Users,
-  Shield
-} from 'lucide-react';
+import { Chrome as Home, Calendar, MessageSquare, User, Utensils, X, LogOut, Bell, Settings, Users, Shield } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
 import { useToast } from './Toast';
