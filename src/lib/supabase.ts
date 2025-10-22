@@ -36,6 +36,8 @@ export interface Database {
           hostel_block: string | null;
           room_number: string | null;
           avatar_url: string | null;
+          role: 'student' | 'warden' | 'admin';
+          department: string | null;
           created_at: string;
           updated_at: string;
         };
@@ -47,6 +49,8 @@ export interface Database {
           hostel_block?: string | null;
           room_number?: string | null;
           avatar_url?: string | null;
+          role?: 'student' | 'warden' | 'admin';
+          department?: string | null;
           created_at?: string;
           updated_at?: string;
         };
@@ -58,6 +62,8 @@ export interface Database {
           hostel_block?: string | null;
           room_number?: string | null;
           avatar_url?: string | null;
+          role?: 'student' | 'warden' | 'admin';
+          department?: string | null;
           created_at?: string;
           updated_at?: string;
         };

@@ -10,6 +10,8 @@ export interface Profile {
   hostel_block: string | null;
   room_number: string | null;
   avatar_url: string | null;
+  role: 'student' | 'warden' | 'admin';
+  department: string | null;
 }
 
 export const useAuth = () => {
@@ -145,6 +147,7 @@ export const useAuth = () => {
     name: string;
     roll_number: string;
     phone_number?: string;
+    role?: 'student' | 'warden' | 'admin';
   }) => {
     try {
       setLoading(true);

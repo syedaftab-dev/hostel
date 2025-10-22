@@ -7,6 +7,8 @@ export interface User {
   hostelBlock: string;
   phoneNumber: string;
   avatar?: string;
+  role: 'student' | 'warden' | 'admin';
+  department?: string;
 }
 
 export interface Room {

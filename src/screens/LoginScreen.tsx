@@ -14,6 +14,7 @@ export const LoginScreen: React.FC = () => {
   const [name, setName] = useState('');
   const [rollNumber, setRollNumber] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
+  const [selectedRole, setSelectedRole] = useState<'student' | 'warden' | 'admin'>('student');
 
   const { signIn, signUp } = useAuth();
   const { showToast } = useToast();
@@ -40,6 +41,7 @@ export const LoginScreen: React.FC = () => {
           name: name.trim(),
           roll_number: rollNumber.trim(),
           phone_number: phoneNumber.trim() || undefined,
+          role: selectedRole,
         });
 
         if (error) {
@@ -138,6 +140,19 @@ export const LoginScreen: React.FC = () => {
                     onChange={(e) => setPhoneNumber(e.target.value)}
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-transparent backdrop-blur-sm"
                   />
+                </div>
+
+                <div className="relative">
+                  <select
+                    value={selectedRole}
+                    onChange={(e) => setSelectedRole(e.target.value as any)}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-transparent backdrop-blur-sm"
+                    style={{ color: 'white' }}
+                  >
+                    <option value="student" style={{ color: 'black' }}>Student</option>
+                    <option value="warden" style={{ color: 'black' }}>Warden</option>
+                    <option value="admin" style={{ color: 'black' }}>Admin</option>
+                  </select>
                 </div>
               </>
             )}

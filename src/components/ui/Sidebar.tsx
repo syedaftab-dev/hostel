@@ -8,7 +8,9 @@ import {
   X,
   LogOut,
   Bell,
-  Settings
+  Settings,
+  Users,
+  Shield
 } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
@@ -19,11 +21,17 @@ interface SidebarProps {
   onClose: () => void;
 }
 
-const menuItems = [
+const getMenuItems = (role: string) => [
   { id: 'dashboard', label: 'Dashboard', icon: Home, path: '/dashboard' },
   { id: 'room-booking', label: 'Room Booking', icon: Calendar, path: '/room-booking' },
   { id: 'mess-menu', label: 'Mess Menu', icon: Utensils, path: '/mess-menu' },
   { id: 'complaints', label: 'Complaints', icon: MessageSquare, path: '/complaints' },
+  ...(role === 'admin' || role === 'warden' ? [
+    { id: 'user-management', label: 'User Management', icon: Users, path: '/user-management' }
+  ] : []),
+  ...(role === 'admin' ? [
+    { id: 'admin-panel', label: 'Admin Panel', icon: Shield, path: '/admin-panel' }
+  ] : []),
   { id: 'profile', label: 'Profile', icon: User, path: '/profile' },
 ];
 
@@ -32,6 +40,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const navigate = useNavigate();
   const { profile, signOut } = useAuth();
   const { showToast } = useToast();
+
+  const menuItems = getMenuItems(profile?.role || 'student');
 
   const handleLogout = async () => {
     try {
@@ -97,7 +107,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 {profile?.name || 'Student'}
               </p>
               <p className="text-sm text-gray-600 truncate">
-                {profile?.roll_number || 'Loading...'}
+                {profile?.roll_number || 'Loading...'} • {profile?.role || 'student'}
               </p>
             </div>
           </div>
