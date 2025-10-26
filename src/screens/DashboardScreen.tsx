@@ -48,11 +48,19 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({ onMenuClick })
       path: '/room-booking'
     },
     {
+      id: 'attendance',
+      title: 'Attendance',
+      description: 'Check in/out & view records',
+      icon: CheckCircle,
+      color: 'bg-green-500',
+      path: '/attendance'
+    },
+    {
       id: 'mess-menu',
       title: 'Mess Menu',
       description: 'View weekly menu',
       icon: Utensils,
-      color: 'bg-green-500',
+      color: 'bg-yellow-500',
       path: '/mess-menu'
     },
     {

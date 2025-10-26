@@ -14,6 +14,7 @@ const getMenuItems = (role: string) => [
   { id: 'room-booking', label: 'Room Booking', icon: Calendar, path: '/room-booking' },
   { id: 'mess-menu', label: 'Mess Menu', icon: Utensils, path: '/mess-menu' },
   { id: 'complaints', label: 'Complaints', icon: MessageSquare, path: '/complaints' },
+  { id: 'attendance', label: 'Attendance', icon: Calendar, path: '/attendance' },
   ...(role === 'admin' || role === 'warden' ? [
     { id: 'user-management', label: 'User Management', icon: Users, path: '/user-management' }
   ] : []),

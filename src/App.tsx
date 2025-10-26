@@ -7,6 +7,7 @@ import { MessMenuScreen } from './screens/MessMenuScreen';
 import { ComplaintsScreen } from './screens/ComplaintsScreen';
 import { ProfileScreen } from './screens/ProfileScreen';
 import { UserManagementScreen } from './screens/UserManagementScreen';
+import { AttendanceScreen } from './screens/AttendanceScreen';
 import { Sidebar } from './components/ui/Sidebar';
 import { LoadingSpinner } from './components/ui/LoadingSpinner';
 import { ToastProvider } from './components/ui/Toast';
@@ -53,6 +54,7 @@ export const App: React.FC = () => {
               <Route path="/mess-menu" element={<MessMenuScreen onMenuClick={() => setSidebarOpen(true)} />} />
               <Route path="/complaints" element={<ComplaintsScreen onMenuClick={() => setSidebarOpen(true)} />} />
               <Route path="/profile" element={<ProfileScreen onMenuClick={() => setSidebarOpen(true)} />} />
+              <Route path="/attendance" element={<AttendanceScreen onMenuClick={() => setSidebarOpen(true)} />} />
               <Route path="/user-management" element={<UserManagementScreen onMenuClick={() => setSidebarOpen(true)} />} />
               <Route path="*" element={<Navigate to="/dashboard" replace />} />
             </Routes>

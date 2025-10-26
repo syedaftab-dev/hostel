@@ -147,6 +147,50 @@ export interface Database {
           updated_at: string;
         };
       };
+      attendance_records: {
+        Row: {
+          id: string;
+          user_id: string;
+          date: string;
+          status: 'present' | 'absent' | 'late' | 'excused';
+          check_in_time: string | null;
+          check_out_time: string | null;
+          notes: string | null;
+          marked_by: string | null;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          user_id: string;
+          date?: string;
+          status?: 'present' | 'absent' | 'late' | 'excused';
+          check_in_time?: string | null;
+          check_out_time?: string | null;
+          notes?: string | null;
+          marked_by?: string | null;
+        };
+        Update: {
+          status?: 'present' | 'absent' | 'late' | 'excused';
+          check_in_time?: string | null;
+          check_out_time?: string | null;
+          notes?: string | null;
+          marked_by?: string | null;
+          updated_at?: string;
+        };
+      };
+      attendance_settings: {
+        Row: {
+          id: string;
+          check_in_start: string;
+          check_in_end: string;
+          check_out_start: string;
+          check_out_end: string;
+          late_threshold_minutes: number;
+          auto_mark_absent_after: string;
+          created_at: string;
+          updated_at: string;
+        };
+      };
     };
   };
 }
