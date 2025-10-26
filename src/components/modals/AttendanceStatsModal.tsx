@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, Calendar, TrendingUp, Users, BarChart3 } from 'lucide-react';
+import { X, Calendar, TrendingUp, Users, ChartBar as BarChart3 } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { Card } from '../ui/Card';
 import { LoadingSpinner } from '../ui/LoadingSpinner';

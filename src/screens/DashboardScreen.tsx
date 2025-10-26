@@ -1,15 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { 
-  Calendar, 
-  MessageSquare, 
-  Utensils, 
-  Bell, 
-  Home as HomeIcon,
-  Users,
-  AlertCircle,
-  CheckCircle
-} from 'lucide-react';
+import { Calendar, MessageSquare, Utensils, Bell, Chrome as HomeIcon, Users, CircleAlert as AlertCircle, CircleCheck as CheckCircle } from 'lucide-react';
 import { Header } from '../components/ui/Header';
 import { Card } from '../components/ui/Card';
 import { LoadingSpinner } from '../components/ui/LoadingSpinner';

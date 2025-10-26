@@ -1,17 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  Calendar, 
-  Clock, 
-  Users, 
-  CheckCircle, 
-  XCircle, 
-  AlertCircle, 
-  UserCheck,
-  Search,
-  Filter,
-  Download,
-  Settings
-} from 'lucide-react';
+import { Calendar, Clock, Users, CircleCheck as CheckCircle, Circle as XCircle, CircleAlert as AlertCircle, UserCheck, Search, Filter, Download, Settings } from 'lucide-react';
 import { Header } from '../components/ui/Header';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';

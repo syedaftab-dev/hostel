@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Search, CheckCircle, XCircle, Clock, AlertCircle } from 'lucide-react';
+import { X, Search, CircleCheck as CheckCircle, Circle as XCircle, Clock, CircleAlert as AlertCircle } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { Card } from '../ui/Card';
 import { useAttendance } from '../../hooks/useAttendance';
