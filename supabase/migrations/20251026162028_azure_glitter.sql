@@ -34,7 +34,7 @@
   3. Functions
     - Auto-mark absent students function
     - Attendance statistics functions
-</sql>
+*/
 
 -- Create attendance status enum
 CREATE TYPE attendance_status AS ENUM ('present', 'absent', 'late', 'excused');
